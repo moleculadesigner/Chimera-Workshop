@@ -1,0 +1,44 @@
+\section{Виды структур и как их получить}
+Основные форматы структур больших биомолекул~-- PDB и mmCIF. Оба формата текстовые, с определенным 
+синтаксисом\footnote{Документация: \url{https://www.wwpdb.org/documentation/file-format}}. 
+Формат PDB считается устаревшим, но все еще широко используется. Если вы начинаете новый проект, 
+связанный со структурами биомолекул, лучше использовать mmCIF там, где это возможно, так как этот
+формат устойчивее к ошибкам и позволяет хранить больше метаданных.
+
+Малые молекулы, например, метаболиты, коферменты и лекарственные препараты тоже можно закодировать в PDB, но еще довольно часто встречаются форматы: \href{https://reference.wolfram.com/language/ref/format/MOL2.html}{MOL2}, \href{http://libatoms.github.io/QUIP/io.html#extendedxyz}{XYZ} и однострочники (\href{http://opensmiles.org/opensmiles.html}{SMILES} и \href{https://pubs.acs.org/doi/pdfplus/10.1021/ci960109j}{SYBYL Line Notation})
+
+Чаще всего, структура, с которой вы работаете, уже содержится в какой-нибудь базе данных и иметь файл с ней необязательно, достаточно знать идентификатор (PDB~ID, например)~-- Химера сама загрузит всю необходимую информацию с сервера БД.
+
+\paragraph{Распространенные базы данных структур биомолекул:}
+\begin{itemize}
+    \item PDB (\href{https://rcsb.org/pdb}{RCSB}, \href{https://www.ebi.ac.uk/pdbe}{PDBe}, \href{https://pdbj.org}{PDBj})~-- структуры белков;
+    \item \href{http://ndbserver.rutgers.edu}{NDB}~-- структуры нуклеиновых кислот;
+    \item \href{http://scop2.mrc-lmb.cam.ac.uk}{SCOP2} и \href{http://www.cathdb.info}{CATH}~-- эволюция белков, структурные семейства, домены, ук\-лад\-ка белков;
+    \item \href{https://www.ebi.ac.uk/pdbe/emdb/}{EMDB}~-- электронная микроскопия.
+\end{itemize}
+
+\paragraph{Базы данных малых молекул}
+\begin{itemize}
+    \item \href{https://pubchem.ncbi.nlm.nih.gov/}{PubChem}~-- база данных химических соединений от NCBI;
+    \item \href{https://www.ebi.ac.uk/chembl/}{ChEMBL} и \href{https://www.ebi.ac.uk/chebi/}{ChEBI}~-- база данных и онтология биомолекул от EBI;
+    \item \href{http://zinc15.docking.org}{ZINC}~-- база данных коммерчески доступных соединений (оптимизирована для виртуального скринига);
+    \item \href{https://www.ccdc.cam.ac.uk}{CCDC}~-- кембриджская кристаллографическая база данных;
+\end{itemize}
+
+\subsection*{Задание~1}
+\begin{enumerate}
+    \item Запустите Химеру.
+    
+    \item \textit{Загрузим структуру с сервера PDB:}\\
+        В меню\quad\texttt{File~> Fetch by ID...}\quad выберите пункт\quad\texttt{PDB (mmCIF)}, введите
+        \textcolor{red}{<PDBID>} %%%%%%%%%%%%%%%%%%%%%!!!!!!!
+        и нажмите\quad\texttt{Fetch}.\\
+        \textit{Должна открыться структура белка BRAF дикого типа.}
+    
+    \item \textit{Теперь откроем обычный PDB-файл:}\\
+        В меню\quad\texttt{File~> Open...}\quad откройте файл\quad\texttt{braf\_v600e.pdb}.\\
+        \textit{К уже открытой структуре белка BRAF WT добавилась структура мутантной формы BRAF V600E.}
+        
+    \item Выведите список моделей\quad\texttt{Tools~> General Controls~> Model Panel}.\\
+        Сколько моделей открыто? Сколько из них активно? Попробуйте скрыть и снова показать модель.
+\end{enumerate}

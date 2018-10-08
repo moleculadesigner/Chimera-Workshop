@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+
+	\usepackage{amssymb,amsfonts,amsmath,amsthm}	% математические дополнения от АМС
+	%\usepackage{indentfirst}				% отделять первую строку раздела абзацным отступом тоже
+	\usepackage{graphicx}
+	\usepackage{tabularx}
+	\usepackage{hyperref}
+	\usepackage{textcomp}
+	\usepackage{xcolor}
+	
+	\usepackage[utf8x]{inputenc}
+	\usepackage[T1,T2A]{fontenc}
+	\usepackage[russian]{babel}
+	%\usepackage[english]{babel}
+
+	\usepackage{geometry}					% Меняем поля страницы
+	\geometry{left=1.5in}					    % левое поле
+	\geometry{right=1.2in}					% правое поле
+	\geometry{top=1.2in}				    	% верхнее поле
+	\geometry{bottom=1.2in}					% нижнее поле
+	
+	\linespread{1.3}					    % полуторный интервал
+	%\renewcommand{\rmdefault}{ftm} 		% Times New Roman
+	\frenchspacing
+
+%===============================   #Alias   ====================================
+
+%===============================================================================	
+	%\hfuzz=0.5pt
+	%\tolerance=3000
+
+	\title{Практический семинар\\ \huge{Визуализация структур в UCSF Chimera}}
+	\author{Данила Яковлев}
+	\date{2018}
+
+\begin{document}
+\maketitle
+\input{Abstract.tex}\clearpage
+\input{PDBFiles.tex}\clearpage
+\input{Appearance.tex}\clearpage
+\input{Ribbons.tex}\clearpage
+\end{document}
