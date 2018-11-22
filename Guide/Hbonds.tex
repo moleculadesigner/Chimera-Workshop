@@ -1,0 +1,32 @@
+\section{Водородные связи и межатомные \\ контакты}
+UCSF Chimera может предсказывать водородные связи, межатомные контакты и отталкивающие взаимодействия в исследуемых структурах. Для этого служат два инструмента: \texttt{FindHBond} и \texttt{Find Clashes/Contacts}.
+
+К сожалению, связи и контакты предсказываются только на основе геометрии типа атомов, заряды и дипольные моменты не учитываются, поэтому, данные о взаимодействиях, полученные в химере, пригодны только для первичного анализа структур.
+
+\subsection*{Задание~6.1}
+\begin{enumerate}
+    \item Выделите группу лигандов\\\texttt{Select > Named Selections > <Имя\_Группы>}\\
+    \textit{см. задание~4.\ref{task:sel}}
+    
+    \item Вызовите диалоговое окно\\\texttt{Tools~> Structure Analysis~> FindHBonds}
+    
+    \item Выберите опцию поиска связей только внутри моделей (радиокнопка \texttt{intra-model})
+    
+    \item Чтобы ограничить поиск, выберите опцию\\
+    Only find H-bonds\quad\texttt{with at~least one end selected}.
+    
+    \item Нажмите\quad\texttt{Apply}.
+    
+    \item Проанализируйте водородные связи лиганд-белок для каждой модели.
+\end{enumerate}
+
+\subsection*{Задание~6.2}
+\begin{enumerate}
+    \item Вызовите диалоговое окно\\\texttt{Tools~> Structure Analysis~> Find Clashes/Contacts}.
+    
+    \item Отметьте выделенные атомы как основу для поиска (нажмите\quad\texttt{De\-sign\-ate}) и все остальные атомы модели как вероятные контакты (радиокнопка\quad\texttt{other atoms in the same model}).
+    
+    \item Выберите настройки для поиска контактов (кнопка\quad\texttt{contact}).
+    
+    \item Нажмите\quad\texttt{Apply}.\quad Что получилось?
+\end{enumerate}

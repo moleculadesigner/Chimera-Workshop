@@ -1,7 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 
 	\usepackage{amssymb,amsfonts,amsmath,amsthm}	% математические дополнения от АМС
-	%\usepackage{indentfirst}				% отделять первую строку раздела абзацным отступом тоже
 	\usepackage{graphicx}
 	\usepackage{tabularx}
 	\usepackage{hyperref}
@@ -11,16 +10,8 @@
 	\usepackage[utf8x]{inputenc}
 	\usepackage[T1,T2A]{fontenc}
 	\usepackage[russian]{babel}
-	%\usepackage[english]{babel}
 
-	%\usepackage{geometry}					% Меняем поля страницы
-	%\geometry{left=1.5in}					    % левое поле
-	%\geometry{right=1.2in}					% правое поле
-	%\geometry{top=1.2in}				    	% верхнее поле
-	%\geometry{bottom=1.2in}					% нижнее поле
-	
 	\linespread{1.3}					    % полуторный интервал
-	%\renewcommand{\rmdefault}{ftm} 		% Times New Roman
 	\frenchspacing
 
 %===============================   #Alias   ====================================
@@ -35,9 +26,12 @@
 
 \begin{document}
 \maketitle
-\input{Abstract.tex}\clearpage
-\input{PDBFiles.tex}\clearpage
-\input{Appearance.tex}\clearpage
-\input{Ribbons.tex}\clearpage
-\input{Guide/Selection.tex}\clearpage
+\input{Guide/Abstract.tex}\clearpage
+\input{Guide/PDBFiles.tex}
+\input{Guide/Appearance.tex}
+\input{Guide/Ribbons.tex}
+\input{Guide/Selection.tex}
+\input{Guide/Alignment.tex}
+\input{Guide/Hbonds.tex}
+\input{Guide/Surface.tex}
 \end{document}
